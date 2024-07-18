@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+body button {
+  font-family: "Poppins";
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(24, 49, 83);
+  background-color: gold;
+  transition: 0.3;
+}
+.cont button {
+  font-size: 40px;
+  font-family: "Poppins";
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  align-items: center;
+  padding: 10px 20px;
+  transition: 0.3s;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: rgb(24, 49, 83) 0px 25px 0px 0px;
+  &:hover {
+    box-shadow: rgb(24, 49, 83) 0px 15px 0px 0px;
+    margin-top: 20px;
+  }
+  &:active {
+    box-shadow: rgb(24, 49, 83) 0px 5px 0px 0px;
+    margin-top: 38px;
+  }
+}
+.animate-cont button {
+  color: rgb(24, 49, 83);
+  font-family: cera-round-pro;
+  font-size: 40px;
+  &:hover {
+    font-size: 50px;
+  }
+}
+.animate-cont button {
+  font-family: "Poppins";
+  animation: button 1s ease-in infinite alternate;
+}
+.animate-cont button:nth-child(2) {
+  animation: button 1.25s ease-in infinite alternate;
+}
+.animate-cont button:nth-child(3) {
+  animation: button 1.5s ease-in infinite alternate;
+}
+h1 {
+  transition: 0.1s;
+}
+.cont {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 100px;
+}
+@keyframes button {
+  from {
+    margin-bottom: 100px;
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+}
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+}
+.spin {
+  margin-top: 80px;
+  font-size: 31px;
+  font-family: "Poppins";
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: rgb(255, 255, 255);
+  color: rgb(24, 49, 83);
+  align-items: center;
+  padding: 10px 0px;
+  transition: 0.3s;
+  border-radius: 0px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: rgb(24, 49, 83) 0px 25px 0px 0px;
+  &:hover {
+    box-shadow: rgb(24, 49, 83) 0px 15px 0px 0px;
+    margin-top: 100px;
+  }
+  &:active {
+    box-shadow: rgb(24, 49, 83) 0px 5px 0px 0px;
+    margin-top: 118px;
+  }
+}

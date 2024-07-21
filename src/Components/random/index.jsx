@@ -1,12 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 function Random() {
-  let random = Math.random() * (6 - 1) + 1;
+  let str = "srtrrt";
+
+  let b = 0;
+  let random1;
+  let valid = 0;
+  function Res() {
+    valid++;
+    let images = document.querySelectorAll(".game");
+    let i = 100;
+    let id = setInterval(function () {
+      i += 100;
+      if (b == 20) {
+        document.querySelector(".win-name").textContent = `${images[random1]
+          .getAttribute("class")
+          .slice(4)}`;
+        return;
+      }
+      if (i == 10000) {
+        clearInterval(id);
+      } else {
+        random1 = Math.floor(Math.random() * 6) + 1;
+        images[random1].style.zIndex = `${i}`;
+        b++;
+      }
+    }, i);
+
+    // setWinnerState(resState) = images[random2].textContent;
+  }
   return (
     <div className="cont-spinner-images">
       <div className=" spinner">
-        <button className="spin">
-          <i class="fa-solid fa-dice"></i>Spin<i class="fa-solid fa-dice"></i>
+        <button onClick={Res} className="spin">
+          <i className="fa-solid fa-dice"></i>Spin
+          <i className="fa-solid fa-dice"></i>
         </button>
         <div className="images">
           <img
@@ -17,7 +45,7 @@ function Random() {
           />
           <img
             id="2"
-            src="https://lh3.googleusercontent.com/proxy/rlhRstmU0GnxTwxI1t9xe2bTn4XRfKSAeU-BuSYQATmhDB13BxsGNzjRrhWnW_5ktaJ8qC4Yd9fYzAGed-WX4kSg_sOtoySONKMge1o"
+            src="https://www.iphones.ru/wp-content/uploads/2010/03/IMG_03231.jpg"
             alt=""
             className="game Farmfrenzy"
           />
@@ -37,15 +65,16 @@ function Random() {
             id="5"
             src="https://www.esrb.org/wp-content/uploads/2022/11/Minecraft-FEATURED-1024x576-_-R.jpg"
             alt=""
-            className="game minecraft"
+            className="game Minecraft"
           />
           <img
             id="6"
             src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/capsule_616x353.jpg?t=1717972262"
             alt=""
-            className="game skyrim"
+            className="game Skyrim"
           />
           <h1 className="win">WINNER: </h1>
+          <h1 className="win-name"></h1>
         </div>
       </div>
     </div>

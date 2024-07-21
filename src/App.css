@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
 
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -75,6 +80,10 @@ h1 {
   }
 }
 .count {
+  width: 100%;
+  text-wrap: none;
+  font-size: 90px;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;

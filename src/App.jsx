@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Tabs from "./Components/Tabs";
 import Like from "./Components/Likes and Dislikes";
 import Random from "./Components/random";
+import Gallery from "./Components/image gallery";
+import Progres from "./Components/Progress Bar";
 import "./App.css";
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
       <Tabs />
       <Like />
       <Random />
+      <Progres />
+      <Gallery />
     </>
   );
 }

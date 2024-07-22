@@ -1,15 +1,6 @@
 import React from "react";
 import "./index.css";
 function images() {
-  let image = document.querySelectorAll(".image-game");
-  image.forEach((value) => {
-    value.addEventListener("click", (event) => {
-      alert("true");
-      event.style.zIndex = "10";
-      event.style.width = "900px";
-      event.style.height = "600px";
-    });
-  });
   return (
     <div className="gallery">
       <h1 className="count">Games Gallery</h1>
